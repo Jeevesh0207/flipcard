@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+:root {
+    --wdth: 50%;
+    --hight: 50%;
+}
+
+.header {
+    width: var(--wdth);
+    height: var(--hight);
+    /* background-color: antiquewhite; */
+    position: absolute;
+    left: calc(50% - calc(var(--wdth)/2));
+    top: calc(50% - calc(var(--hight)/2));
+    perspective: 1500px;
+
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s;
+}
+
+.text,
+.pic {
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+    position: absolute;
+    backface-visibility: hidden;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+
+
+.text {
+    /* background-color: orange; */
+    transform: rotateY(180deg);
+    padding: 30px;
+}
+
+.header:hover .card {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+.pic {
+    background-image: url(wallpaperflare.com_wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.text h1 {
+    color: red;
+    margin-bottom: 5px;
+}
+
+.text p {
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+
+
+@media screen and (max-width:690px) {
+
+    :root {
+        --wdth: 90%;
+        --hight: 30%;
+    }
+    
+    .text{
+        padding: 20px;
+        overflow: scroll;
+    }
+
+    .text h1{
+        font-size: 20px;
+    }
+    .text p{
+        font-size: 10px;
+    }
+    
+}
+
